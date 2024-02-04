@@ -1,69 +1,85 @@
-Apache SkyWalking
-==========
-
-<img src="http://skywalking.apache.org/assets/logo.svg" alt="Sky Walking logo" height="90px" align="right" />
-
-**SkyWalking**: an APM(application performance monitor) system, especially designed for
-microservices, cloud native and container-based architectures.
-
-[![GitHub stars](https://img.shields.io/github/stars/apache/skywalking.svg?style=for-the-badge&label=Stars&logo=github)](https://github.com/apache/skywalking)
-[![Twitter Follow](https://img.shields.io/twitter/follow/asfskywalking.svg?style=for-the-badge&label=Follow&logo=twitter)](https://twitter.com/AsfSkyWalking)
-
-[![Maven Central](https://img.shields.io/maven-central/v/org.apache.skywalking/apache-skywalking-apm.svg)](http://skywalking.apache.org/downloads/)
-
-# Abstract
-**SkyWalking** is an open source APM system, including monitoring, tracing, diagnosing capabilities for distributed system
-in Cloud Native architecture.
-
-* Distributed Tracing
-  * End-to-end distributed tracing. Service topology analysis, service-centric observability and APIs dashboards.
-* Agents for your stack
-  * Java, .Net Core, PHP, NodeJS, Golang, LUA, Rust, C++, Client JavaScript and Python agents with active development and maintenance.
-* eBPF early adoption
-  * Rover agent works as metrics collector and profiler powered by eBPF to diagnose CPU and network performance.
-* Scaling
-  * 100+ billion telemetry data could be collected and analyzed from one SkyWalking cluster.
-* Mature Telemetry Ecosystems Supported
-  * Metrics, Traces, and Logs from mature ecosystems are supported, e.g. Zipkin, OpenTelemetry, Prometheus, Zabbix, Fluentd
-* Native APM Database
-  * BanyanDB, an observability database, created in 2022, aims to ingest, analyze and store telemetry/observability data.
-* Consistent Metrics Aggregation
-  * SkyWalking native meter format and widely known metrics format(OpenTelemetry, Telegraf, Zabbix, e.g.) are processed through the same script pipeline.
-* Log Management Pipeline
-  * Support log formatting, extract metrics, various sampling policies through script pipeline in high performance.
-* Alerting and Telemetry Pipelines
-  * Support service-centric, deployment-centric, API-centric alarm rule setting. Support forwarding alarms and all telemetry data to 3rd party.
-
-<img src="https://skywalking.apache.org/images/home/architecture.svg?t=20220513"/>
-
-# Documentation
-- [Official documentation](https://skywalking.apache.org/docs/#SkyWalking)
-
-
-# Downloads
-Please head to the [releases page](https://skywalking.apache.org/downloads/) to download a release of Apache SkyWalking.
-
-# Compiling project
-Follow this [document](docs/en/guides/How-to-build.md).
-
-# Code of conduct
-This project adheres to the Contributor Covenant [code of conduct](https://www.apache.org/foundation/policies/conduct). By participating, you are expected to uphold this code.
-Please follow the [REPORTING GUIDELINES](https://www.apache.org/foundation/policies/conduct#reporting-guidelines) to report unacceptable behavior.
-
-# Live Demo
-- Find the [live demo](https://skywalking.apache.org/#demo) and [screenshots](https://skywalking.apache.org/#arch) on our website.
-- Follow the [showcase](https://skywalking.apache.org/docs/skywalking-showcase/next/readme/) to set up preview deployment quickly.
-
-# Contact Us
-* Mail list: **dev@skywalking.apache.org**. Mail to `dev-subscribe@skywalking.apache.org`, follow the reply to subscribe the mail list.
-* Send `Request to join SkyWalking slack` mail to the mail list(`dev@skywalking.apache.org`), we will invite you in.
-* For Chinese speaker, send `[CN] Request to join SkyWalking slack` mail to the mail list(`dev@skywalking.apache.org`), we will invite you in.
-* Twitter, [ASFSkyWalking](https://twitter.com/AsfSkyWalking)
-* [bilibili B站 视频](https://space.bilibili.com/390683219)
-
-# Our Users
-Hundreds of companies and organizations use SkyWalking for research, production, and commercial product.
-Visit our [website](http://skywalking.apache.org/users/) to find the user page.
-
-# License
-[Apache 2.0 License.](LICENSE)
+<div class="Box-sc-g0xbh4-0 bJMeLZ js-snippet-clipboard-copy-unpositioned" data-hpc="true"><article class="markdown-body entry-content container-lg" itemprop="text"><h1 tabindex="-1" dir="auto"><a id="user-content-apache-skywalking" class="anchor" aria-hidden="true" tabindex="-1" href="#apache-skywalking"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">阿帕奇空中漫步</font></font></h1>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/4865142a9f70398768b672bbe0dae33f219cfdd0f931d834a2d9dcc3c4ce390b/687474703a2f2f736b7977616c6b696e672e6170616368652e6f72672f6173736574732f6c6f676f2e737667"><img src="https://camo.githubusercontent.com/4865142a9f70398768b672bbe0dae33f219cfdd0f931d834a2d9dcc3c4ce390b/687474703a2f2f736b7977616c6b696e672e6170616368652e6f72672f6173736574732f6c6f676f2e737667" alt="天空漫步标志" height="90px" align="right" data-canonical-src="http://skywalking.apache.org/assets/logo.svg" style="max-width: 100%;"></a></p>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SkyWalking</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：一个APM（应用程序性能监控）系统，专为微服务、云原生和基于容器的架构而设计。</font></font></p>
+<p dir="auto"><a href="https://github.com/apache/skywalking"><img src="https://camo.githubusercontent.com/9a2f788c0faf12dfe949eb721e1caa6d9d7b642574a42f09a774d9b90ecfcf2c/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f73746172732f6170616368652f736b7977616c6b696e672e7376673f7374796c653d666f722d7468652d6261646765266c6162656c3d5374617273266c6f676f3d676974687562" alt="GitHub 星星" data-canonical-src="https://img.shields.io/github/stars/apache/skywalking.svg?style=for-the-badge&amp;label=Stars&amp;logo=github" style="max-width: 100%;"></a>
+<a href="https://twitter.com/AsfSkyWalking" rel="nofollow"><img src="https://camo.githubusercontent.com/76de4ae9f779efdbc855d7ce6ebd2fb0bc6480928b211feff9922e8596307378/68747470733a2f2f696d672e736869656c64732e696f2f747769747465722f666f6c6c6f772f617366736b7977616c6b696e672e7376673f7374796c653d666f722d7468652d6261646765266c6162656c3d466f6c6c6f77266c6f676f3d74776974746572" alt="推特关注" data-canonical-src="https://img.shields.io/twitter/follow/asfskywalking.svg?style=for-the-badge&amp;label=Follow&amp;logo=twitter" style="max-width: 100%;"></a></p>
+<p dir="auto"><a href="http://skywalking.apache.org/downloads/" rel="nofollow"><img src="https://camo.githubusercontent.com/503236df70d4067f7d4cc6669a5d8a09de757c05cd799933487662db71015881/68747470733a2f2f696d672e736869656c64732e696f2f6d6176656e2d63656e7472616c2f762f6f72672e6170616368652e736b7977616c6b696e672f6170616368652d736b7977616c6b696e672d61706d2e737667" alt="梅文中心" data-canonical-src="https://img.shields.io/maven-central/v/org.apache.skywalking/apache-skywalking-apm.svg" style="max-width: 100%;"></a></p>
+<h1 tabindex="-1" dir="auto"><a id="user-content-abstract" class="anchor" aria-hidden="true" tabindex="-1" href="#abstract"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">抽象的</font></font></h1>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SkyWalking</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">是一个开源的APM系统，为云原生架构中的分布式系统提供监控、跟踪和诊断功能。</font></font></p>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">分布式追踪
+</font></font><ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">端到端分布式跟踪。</font><font style="vertical-align: inherit;">服务拓扑分析、以服务为中心的可观察性和 API 仪表板。</font></font></li>
+</ul>
+</li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">您堆栈的代理
+</font></font><ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Java、.Net Core、PHP、NodeJS、Golang、LUA、Rust、C++、客户端 JavaScript 和 Python 代理，具有积极的开发和维护能力。</font></font></li>
+</ul>
+</li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">eBPF 早期采用
+</font></font><ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Rover 代理充当由 eBPF 提供支持的监视器和分析器，用于监视 Kubernetes 部署并诊断 CPU 和网络性能。</font></font></li>
+</ul>
+</li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">缩放
+</font></font><ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">一个 SkyWalking 集群可以收集和分析超过 1000 亿个遥测数据。</font></font></li>
+</ul>
+</li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">支持成熟的遥测生态系统
+</font></font><ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">支持来自成熟生态系统的指标、跟踪和日志，例如 Zipkin、OpenTelemetry、Prometheus、Zabbix、Fluentd</font></font></li>
+</ul>
+</li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">原生 APM 数据库
+</font></font><ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">BanyanDB 是一个可观测性数据库，创建于 2022 年，旨在摄取、分析和存储遥测/可观测数据。</font></font></li>
+</ul>
+</li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">一致的指标聚合
+</font></font><ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SkyWalking 原生计量格式和众所周知的计量格式（例如 OpenTelemetry、Telegraf、Zabbix）通过相同的脚本管道进行处理。</font></font></li>
+</ul>
+</li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">日志管理管道
+</font></font><ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">通过脚本管道高性能支持日志格式化、提取指标、各种采样策略。</font></font></li>
+</ul>
+</li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">警报和遥测管道
+</font></font><ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">支持以服务为中心、以部署为中心、以API为中心的报警规则设置。</font><font style="vertical-align: inherit;">支持将警报和所有遥测数据转发给第三方。</font></font></li>
+</ul>
+</li>
+</ul>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/9ef1fae258da9a2031f22487bfb4b52bae59ee1c1a61c5fdf84309b2c2ee5129/68747470733a2f2f736b7977616c6b696e672e6170616368652e6f72672f696d616765732f686f6d652f6172636869746563747572652e7376673f743d3230323230353133"><img src="https://camo.githubusercontent.com/9ef1fae258da9a2031f22487bfb4b52bae59ee1c1a61c5fdf84309b2c2ee5129/68747470733a2f2f736b7977616c6b696e672e6170616368652e6f72672f696d616765732f686f6d652f6172636869746563747572652e7376673f743d3230323230353133" data-canonical-src="https://skywalking.apache.org/images/home/architecture.svg?t=20220513" style="max-width: 100%;"></a></p>
+<h1 tabindex="-1" dir="auto"><a id="user-content-live-demo" class="anchor" aria-hidden="true" tabindex="-1" href="#live-demo"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">现场演示</font></font></h1>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在我们的网站上查找</font></font><a href="https://skywalking.apache.org/#demo" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">带有本机 UI 和 Grafana 的 SkyWalking 现场演示</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">以及</font></font><a href="https://skywalking.apache.org/#arch" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">屏幕截图</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">按照</font></font><a href="https://skywalking.apache.org/docs/skywalking-showcase/next/readme/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">展示</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">快速设置预览部署。</font></font></li>
+</ul>
+<h1 tabindex="-1" dir="auto"><a id="user-content-documentation" class="anchor" aria-hidden="true" tabindex="-1" href="#documentation"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文档</font></font></h1>
+<ul dir="auto">
+<li><a href="https://skywalking.apache.org/docs/#SkyWalking" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">官方文档</font></font></a></li>
+</ul>
+<h1 tabindex="-1" dir="auto"><a id="user-content-downloads" class="anchor" aria-hidden="true" tabindex="-1" href="#downloads"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">下载</font></font></h1>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">请前往</font></font><a href="https://skywalking.apache.org/downloads/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">发行页面</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">下载 Apache SkyWalking 的发行版。</font></font></p>
+<h1 tabindex="-1" dir="auto"><a id="user-content-compiling-project" class="anchor" aria-hidden="true" tabindex="-1" href="#compiling-project"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">编译工程</font></font></h1>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">请遵循本</font></font><a href="/apache/skywalking/blob/master/docs/en/guides/How-to-build.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文档</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<h1 tabindex="-1" dir="auto"><a id="user-content-code-of-conduct" class="anchor" aria-hidden="true" tabindex="-1" href="#code-of-conduct"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">行为守则</font></font></h1>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">该项目遵守贡献者契约</font></font><a href="https://www.apache.org/foundation/policies/conduct" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">行为准则</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font><font style="vertical-align: inherit;">通过参与，您应该遵守此准则。</font><font style="vertical-align: inherit;">请遵循</font></font><a href="https://www.apache.org/foundation/policies/conduct#reporting-guidelines" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">报告指南</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">报告不可接受的行为。</font></font></p>
+<h1 tabindex="-1" dir="auto"><a id="user-content-contact-us" class="anchor" aria-hidden="true" tabindex="-1" href="#contact-us"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">联系我们</font></font></h1>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">邮件列表：</font></font><strong><a href="mailto:dev@skywalking.apache.org"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">dev@skywalking.apache.org</font></font></a></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font><font style="vertical-align: inherit;">发送邮件至</font></font><code>dev-subscribe@skywalking.apache.org</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，按照回复订阅邮件列表。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">发送</font></font><code>Request to join SkyWalking slack</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">邮件至邮件列表( </font></font><code>dev@skywalking.apache.org</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">)，我们将邀请您加入。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">对于中文用户，请发送</font></font><code>[CN] Request to join SkyWalking slack</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">邮件至邮件列表( </font></font><code>dev@skywalking.apache.org</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">)，我们将邀请您加入。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">推特、</font></font><a href="https://twitter.com/AsfSkyWalking" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ASFSkyWalking</font></font></a></li>
+<li><a href="https://space.bilibili.com/390683219" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">bilibili B站视频</font></font></a></li>
+<li><a href="https://juejin.cn/user/13673577331607/posts" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">掘金</font></font></a></li>
+</ul>
+<h1 tabindex="-1" dir="auto"><a id="user-content-our-users" class="anchor" aria-hidden="true" tabindex="-1" href="#our-users"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我们的用户</font></font></h1>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">数百家公司和组织将 SkyWalking 用于研究、生产和商业目的。</font><font style="vertical-align: inherit;">访问我们的</font></font><a href="http://skywalking.apache.org/users/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">网站</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">找到用户页面。</font></font></p>
+<h1 tabindex="-1" dir="auto"><a id="user-content-license" class="anchor" aria-hidden="true" tabindex="-1" href="#license"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">执照</font></font></h1>
+<p dir="auto"><a href="/apache/skywalking/blob/master/LICENSE"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache 2.0 许可证。</font></font></a></p>
+</article></div>
